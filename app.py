@@ -98,7 +98,6 @@ def state_analysis(state):
     karnataka_crime_trend = crime[crime['STATE/UT'] == 'KARNATAKA'].groupby('YEAR')['TOTAL IPC CRIMES'].sum()
     fig, ax = plt.subplots(figsize=(10, 5))
     ax.plot(karnataka_crime_trend.index, karnataka_crime_trend.values, marker='o', color='blue')
-    ax.set_title("Crime Trend in Karnataka (2000–2012)")
     ax.set_xlabel("Year")
     ax.set_ylabel("Total IPC Crimes")
     ax.grid(True)
